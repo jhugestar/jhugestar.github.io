@@ -1,0 +1,292 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+	<title>MAP Visibility Estimation</title>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50740543-1', 'cmu.edu');
+  ga('send', 'pageview');
+
+  </script>
+	
+</head>
+
+<body>
+<table width="916", align="center">
+  <tr>
+  	  
+	  <td width="908">
+		  <h1> <center> MAP Visibility Estimation for <br> Large-Scale Dynamic 3D Reconstruction </center></h1>
+
+
+   	<p align = "center"><font size = "4">  <a href="https://jhugestar.github.io">Hanbyul Joo</a>, <a href="http://www.andrew.cmu.edu/user/hyunsoop/">Hyun Soo Park</a>, and <a href="http://www.cs.cmu.edu/~yaser/">Yaser Sheikh</a></font></p>
+	<p align = "center"><font size = "4", font="font" face = "Georgia"> Carnegie Mellon University </p>
+
+	<iframe width="853" height="480" src="http://www.youtube.com/embed/D-CdCI27nlY?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	<br>
+	<!-- img src="Resized_resized_domeImage.png" width="853">
+	<p align="center"> The Panoptic Studio exterior and interior </p -->
+	<!-- iframe width="853" height="480" src="http://www.youtube.com/embed/iKPcj2hGO_8" frameborder="0" allowfullscreen></iframe -->
+	<!-- p align = "center"><img src="result1.jpg" alt="" width="600" /></p >
+	<p align = "center"><font size = "3", font="font" face = "Georgia">Figure 1: 
+We reconstruct 3D trajectories in real world scenes in the presence of significant occlusion, large displacement, and topological
+change. The colors code the length of trajectories. </b></font></p -->
+
+	<h2>Abstract</h2>
+	<p align = "justify">Many traditional challenges in reconstructing 3D motion, such as matching across wide baselines and handling occlusion, reduce in significance as the number of unique viewpoints increases. However, to obtain this benefit, a new challenge arises: estimating precisely which cameras observe which points at each instant in time. We present a maximum a posteriori (MAP) estimate of the time-varying visibility of the target points to reconstruct the 3D motion of an event from a large number of cameras. Our algorithm takes, as input, camera poses and image sequences, and outputs the time-varying set of the cameras in which a target patch is visible and its reconstructed trajectory. We model visibility estimation as a MAP estimate by incorporating various cues including photometric consistency, motion consistency, and geometric consistency, in conjunction with a prior that rewards consistent visibilities in proximal cameras. An optimal estimate of visibility is obtained by finding the minimum cut of a capacitated graph over cameras. We demonstrate that our method estimates visibility with greater accuracy, and increases tracking performance producing longer trajectories, at more locations, and at higher accuracies than methods that ignore visibility or use photometric consistency alone. </p>
+
+	
+	<h2>Publication</h2>
+	<p>Hanbyul Joo, Hyun Soo Park, and Yaser Sheikh. MAP Visibility Estimation for Large-Scale Dynamic 3D Reconstruction, In CVPR, 2014. <b> (Oral Presentation) </b> <br>
+ [<a href="CVPR_2014_Visibility.pdf">Paper</a>, <a href="visibility_bib">BibTeX</a>, <a href="CVPR14_slide.pdf">Slide (pdf)</a>, <a href="CVPR14_poster.pdf">Poster (pdf)</a>, <a href="http://techtalks.tv/talks/map-visibility-estimation-for-large-scale-dynamic-3d-reconstruction/60293/">CVPR Talk</a>]</p>
+
+	
+	<h2>Dataset</h2>
+<p>
+	All the input data and reconstruction results are available in this <a href="http://www.cs.cmu.edu/~hanbyulj/14/visibilityDataset.html">dataset page</a>.
+
+	<h2>Videos</h2>
+	<iframe width="853" height="480" src="http://www.youtube.com/embed/LaHTjBWago8?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	<p align="center"> Full Length Video </p>
+	<br>
+	<br>
+	<iframe width="853" height="480" src="//www.youtube.com/embed/TrYo3c1mjgo?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	<p align="center"> Detailed Views of Selected Trajectories </p> 
+
+	<br>
+	<br>
+	<!-- a href="./CVPR_2014_Visibility_shortClip_Final.mp4">Teaser Video (1280x720, 80.M)</a> <br> 
+	<a href="./CVPR_2014_Visibility_FullLength_Final.mp4">Full Length Video (1280x720, 290.6M)</a -->
+	<!-- <table border="1" align="center"  class="dataSet">
+	<tr><td></td><td><p>SampedVideos</p></td><td><p> InputImages </p></td><td><p></p></td><td><p>~</p></td><td><p>~</p></td></tr>
+		<tr><td><p>BatSwing</p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/handstand/handstand_mesh_smooth.tar.gz">mesh_s.tar.gz</a></p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/wheel/wheel_mesh_smooth.tar.gz">mesh_s.tar.gz</a></p></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr><td><p>Volleyball</p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/handstand/handstand_mesh.tar.gz">mesh.tar.gz</a></p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/wheel/wheel_mesh.tar.gz">mesh.tar.gz</a></p></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr><td><p>Cricular Movement</p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/handstand/handstand_data.tar.gz">data.tar.gz</a></p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/wheel/wheel_data.tar.gz">data.tar.gz</a></p></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr><td><p>Confetti</p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/handstand/handstand_silh.tar.gz">silh.tar.gz</a><br />(9.9MB)</p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/wheel/wheel_silh.tar.gz">silh.tar.gz</a><br />(6.8MB)</p></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr><td><p>Fluid Motion</p></td>
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/handstand/handstand_im_part1.tar.gz">im_p1.tar.gz</a><br />(1.7GB)<br />
+			<a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/handstand/handstand_im_part2.tar.gz">im_p2.tar.gz</a><br />(1.7GB)</p></td>
+			
+			<td><p><a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/wheel/wheel_im_part1.tar.gz">im_p1.tar.gz</a><br />(1.2GB)<br />
+			<a href="http://files.is.tue.mpg.de/jgall/data/skelsurf/wheel/wheel_im_part2.tar.gz">im_p2.tar.gz</a><br />(1.2GB)<br /></p></td>
+			
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		
+	</table>
+	-->
+
+	<h2>Press Coverage</h2>
+<table>
+<tr>
+<td width="210" height="50" align="center">
+<a href="http://spectrum.ieee.org/tech-talk/computing/software/camerafilled-dome-recreates-full-3d-motion-scenes"><img src="../logos/IEEESpectrum.jpeg" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.cnet.com/videos/tomorrow-daily-021-new-video-capture-tech-the-rickroll-rickmote-episode-vii-new-x-wing/"><img src="http://upload.wikimedia.org/wikipedia/en/8/8f/Cnetlogo.png" width="50"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.nbcnews.com/tech/innovation/camera-studded-dome-tracks-your-every-move-precision-n161541"><img src="../logos/nbc-news.png" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://news.discovery.com/tech/gear-and-gadgets/dome-of-500-cameras-creates-amazing-3-d-flicks-140724.htm"><img src="../logos/discovery.jpg" width="190"></a>
+</td>
+</tr>
+
+<tr>
+<td width="210" height="50" align="center">
+<a href="http://www.engadget.com/2014/07/21/carnegie-motion-capture-dome/"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Engadget-logo.svg/200px-Engadget-logo.svg.png" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://gizmodo.com/a-dome-packed-with-480-cameras-captures-detailed-3d-ima-1608263411"><img src="http://i.kinja-img.com/gawker-media/image/upload/s--NkOZEtU4--/xxtpkkwu6xvbcaoxjbx2.png" width="150"><a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.theverge.com/2014/7/21/5923767/panoptic-studio-3d-motion-capture-carnegie-melon"><img src="../logos/Verge.png" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.sciencedaily.com/releases/2014/07/140717124950.htm"><img src="http://www.sciencedaily.com/images/scidaily-logo.png" width="150"></a>
+</td>
+</tr>
+
+<tr>
+<td width="210" height="50" align="center">
+<a href="http://phys.org/news/2014-07-combinehundreds-videos-reconstruct-3d-motion.html"><img src="../logos/phyOrg.jpg" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.slate.com/articles/video/video/2014/07/panoptic_studio_carnegie_mellon_s_3_d_camera_dome_can_capture_action.html"><img src="http://upload.wikimedia.org/wikipedia/commons/1/13/Slate_logo.png" width="90"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://petapixel.com/2014/07/21/researchers-use-480-camera-setup-accurately-capture-3d-motion/"><img src="../logos/petapixel.jpg" width="100"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.gizmag.com/3d-motion-reconstruction-camera-panoptic-dome/33033/"><img src="../logos/gizmag.jpeg" width="100"></a>
+</td>
+</tr>
+
+<tr>
+<td width="210" height="50" align="center">
+<a href="http://www.theregister.co.uk/2014/07/22/boffins_fill_a_dome_with_480_cameras_for_3d_motion_capture/"><img src="http://upload.wikimedia.org/wikipedia/en/5/5a/The_Register_r.png" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.theengineer.co.uk/electronics/news/3d-motion-captured-without-markers/1018947.article"><img src="../logos/theEngineer.png" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.popphoto.com/news/2014/07/carnegie-mellon-packs-480-cameras-dome-to-perfectly-track-3d-motion"><img src="../logos/PopPhoto.jpg" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.eurekalert.org/pub_releases/2014-07/cmu-cmc071714.php"><img src="../logos/EurekAlert.jpg" width="120"></a>
+</td>
+</tr>
+
+<tr>
+<td width="210" height="50" align="center">
+<a href="http://www.azorobotics.com/news.aspx?newsID=5985"><img src="../logos/AzoRobot.jpg" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.slrlounge.com/latest-3d-tech-geodome-captures-every-move-480-cameras"><img src="../logos/slrLounge.jpg" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://security-today.com/articles/2014/07/23/panopticon-captures-every-movement-in-3d.aspx"><img src="../logos/securityToday.jpg" width="150"></a>
+</td>
+<td width="210" height="50" align="center">
+<a href="http://www.cmu.edu/news/stories/archives/2014/july/july17_reconstructing3Dmotion.html"><img src="../logos/CMU.jpg" width="130"></a> 
+</td>
+</tr>
+</table>
+<!--
+	<h2>Press Coverage</h2>
+	<ul>
+	<li>
+<a href="http://www.slate.com/articles/video/video/2014/07/panoptic_studio_carnegie_mellon_s_3_d_camera_dome_can_capture_action.html">Freezing Memories in Time: Carnegie Mellon's amazing 3-D "Panoptic Studio"</a><br>
+Slate <br>
+<iframe width="560" height="315" src="//www.youtube.com/embed/kEYoiSPGPqA?list=UUYC4ijpFZY_CtdElWFyy-Gg?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+	</li>
+	<li>
+<a href="http://www.cnet.com/videos/tomorrow-daily-021-new-video-capture-tech-the-rickroll-rickmote-episode-vii-new-x-wing/">Tomorrow Daily: Tomorrow Daily 021: New video capture tech, the Rickroll 'Rickmote,' a new X-wing, and more</a><br>
+CNet <br>
+<iframe width="560" height="315" src="//www.youtube.com/embed/tpIfotFW-P4?rel=0;3&amp;autohide=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+</li>
+	<li>
+<a href="http://www.nbcnews.com/tech/innovation/camera-studded-dome-tracks-your-every-move-precision-n161541"> Camera-Studded Dome Tracks Your Every Move With Precision</a><br>
+NBCNews
+	</li>
+	<li>
+<a href="http://spectrum.ieee.org/tech-talk/computing/software/camerafilled-dome-recreates-full-3d-motion-scenes"> Camera-Filled Dome Recreates Full 3-D Motion Scenes</a><br>
+IEEE Spectrum 
+	</li>
+	<li>
+<a href="http://news.discovery.com/tech/gear-and-gadgets/dome-of-500-cameras-creates-amazing-3-d-flicks-140724.htm"> Amazing 3-D Flicks from Dome of 500 Cameras?</a><br>
+Discovery News 
+	</li>
+
+
+	<li>
+<a href="http://gizmodo.com/a-dome-packed-with-480-cameras-captures-detailed-3d-ima-1608263411">A Dome Packed With 480 Cameras Captures Detailed 3D Images In Motion</a><br>
+Gizmodo
+	</li>
+	<li>
+<a href="http://www.theverge.com/2014/7/21/5923767/panoptic-studio-3d-motion-capture-carnegie-melon">Scientists build a real Panopticon that captures your every move in 3D</a><br>
+The Verge
+	</li>
+	<li>
+<a href="http://www.sciencedaily.com/releases/2014/07/140717124950.htm">Hundreds of videos used to reconstruct 3-D motion without markers</a><br>
+ScienceDaily 
+	</li>
+	<li>
+	<a href="http://phys.org/news/2014-07-combinehundreds-videos-reconstruct-3d-motion.html">Researchers combine hundreds of videos to reconstruct 3D motion without markers</a><br>
+Phys.org
+	</li>
+	<li>
+<a href="http://www.engadget.com/2014/07/21/carnegie-motion-capture-dome/">Watch a dome full of cameras capture 3D motion in extreme detail</a><br>
+Engadget
+	</li>
+	<li>
+<a href="http://petapixel.com/2014/07/21/researchers-use-480-camera-setup-accurately-capture-3d-motion/">Researchers Use a 480-Camera Dome to More Accurately Capture 3D Motion</a><br>
+PetaPixel
+	</li>
+	<li>
+<a href="http://www.gizmag.com/3d-motion-reconstruction-camera-panoptic-dome/33033/">Camera-studded dome used to reconstruct 3D motion</a><br>
+Gizmag
+	</li>
+	<li>
+<a href="http://www.theregister.co.uk/2014/07/22/boffins_fill_a_dome_with_480_cameras_for_3d_motion_capture/">Boffins fill a dome with 480 cameras for 3D motion capture</a><br>
+Register
+	</li>
+	<li>
+<a href="http://www.theengineer.co.uk/electronics/news/3d-motion-captured-without-markers/1018947.article">3D motion captured without markers</a><br>
+The Engineer
+	</li>
+	<li>
+<a href="http://www.popphoto.com/news/2014/07/carnegie-mellon-packs-480-cameras-dome-to-perfectly-track-3d-motion">Carnegie Mellon Packs 480 Cameras In A Dome To Perfectly Track 3D Motion</a><br>
+Popular Photography
+	</li>
+	<li>
+<a href="http://www.eurekalert.org/pub_releases/2014-07/cmu-cmc071714.php">Carnegie Mellon combines hundreds of videos to reconstruct 3D motion without markers</a><br>
+EurekAlert
+	</li>
+	<li>
+<a href="http://www.azorobotics.com/news.aspx?newsID=5985">	Carnegie Mellon Performs Large-Scale 3D Motion Reconstruction by Combining Views of 480 Video Cameras</a><br>
+AZoRobotics
+	</li>
+	<li>
+<a href="http://www.slrlounge.com/latest-3d-tech-geodome-captures-every-move-480-cameras">LATEST 3D TECH: A GEODOME THAT CAPTURES YOUR EVERY MOVE WITH 480 CAMERAS</a><br>
+SLR Lounge
+	</li>
+	<li>
+<a href="http://security-today.com/articles/2014/07/23/panopticon-captures-every-movement-in-3d.aspx">Panopticon Captures Every Movement in 3D</a><br>
+Security Today
+	</li>
+	<li>
+	<a href="http://www.cmu.edu/news/stories/archives/2014/july/july17_reconstructing3Dmotion.html">Carnegie Mellon Combines Hundreds of Videos To Reconstruct 3D Motion Without Use of Markers</a> <br>
+	CMU News
+	</li>
+	</ul>
+-->
+
+	<h2>Acknowledgements</h2>
+	<p> This material is based upon work supported by the National Science Foundation under Grants No. 1353120 and 1029679. Hanbyul Joo was supported, in part, by the Samsung Scholarship.
+</p>
+
+
+
+ 	</td>
+  </tr>
+</table>
+</body>
+</html>
+
