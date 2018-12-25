@@ -1,0 +1,6 @@
+@Article = {joo_cvpr_2014,
+author = {Hanbyul Joo and Hyun Soo Park and Yaser Sheikh},
+title = {MAP Visibility Estimation for Large-Scale Dynamic 3D Reconstruction},
+booktitle = {IEEE Conference on Computer Vision and Pattern Recognition},
+year = {2014}
+}
