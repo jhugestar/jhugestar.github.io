@@ -1,0 +1,6 @@
+@Article = {joo_iccv_2015,
+author = {Hanbyul Joo, Hao Liu, Lei Tan, Lin Gui, Bart Nabbe, Iain Matthews, Takeo Kanade, Shohei Nobuhara, and Yaser Sheikh},
+title = {Panoptic Studio: A Massively Multiview System for Social Motion Capture},
+booktitle = {ICCV},
+year = {2015}
+}
