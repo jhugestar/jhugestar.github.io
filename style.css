@@ -3,8 +3,16 @@
 body,td,th {
 	font-family: "Open Sans", sans-serif;
 	font-size: large;
-	font-weight: 300
+	font-weight: 300;
 }
+
+/* b { font-weight: 400 }    */
+b {
+  font-family: "Source Sans 3", "Source Serif 4", "Times New Roman", Times, serif;
+  font-style: normal; 
+  font-variant-ligatures: common-ligatures;
+}
+
 
 a {
 	color: #000000;
