@@ -7,11 +7,11 @@ body,td,th {
 }
 
 /* b { font-weight: 400 }    */
-b {
+/* b {
   font-family: "Source Sans 3", "Source Serif 4", "Times New Roman", Times, serif;
   font-style: normal; 
   font-variant-ligatures: common-ligatures;
-}
+} */
 
 
 a {
