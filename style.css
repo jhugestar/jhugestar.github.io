@@ -1,60 +1,51 @@
 @charset "UTF-8";
 
-body,td,th {
-	font-family: "Open Sans", sans-serif;
-	font-size: large;
-	font-weight: 300;
+body, td, th {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300; /* 얇은 폰트 유지 */
+    line-height: 1.5; /* 요청하신 대로 1.5로 하향 조정 */
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* b { font-weight: 400 }    */
-/* b {
-  font-family: "Source Sans 3", "Source Serif 4", "Times New Roman", Times, serif;
-  font-style: normal; 
-  font-variant-ligatures: common-ligatures;
-} */
-
-
-a {
-	color: #000000;
-	/* font-size: 18px; */
-	font-weight: 300;
+/* 성함 및 메인 타이틀 */
+.Name {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2; /* 타이틀은 본문보다 조금 더 좁게 설정해야 힘이 있습니다 */
+    letter-spacing: -0.5px;
 }
 
-h1 {
-	line-height: 40px;
-	font-size: 30px;
-	font-family: 'Open Sans', sans-serif;
-}
+/* 섹션 제목 */
 h2 {
-	color: #000000 ;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 20px;
-	margin-top: 0.7em;
-	margin-bottom: 0.3em;
-	padding-bottom: 0.2em;
-	line-height: 1.0;
-	padding-top: 0.5em;
-	border-bottom: 1px solid #aaaaaa;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 1.4em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.2em;
+    border-bottom: 1.2px solid #aaa;
 }
 
-p,ul {
-  	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	font-weight: 100;
+/* 본문 강조 */
+b, strong {
+    font-weight: 550; /* 300과 대비되는 적절한 볼드 */
 }
- .Name {
-	font-size: 30px;
+
+p, ul {
+    font-weight: 300;
+    margin-bottom: 1em; /* 문단 사이의 여백 */
 }
+
+/* 리스트 항목 간격 */
 li {
-margin-top: 0.2em;
-margin-bottom: 0.2em;
-}
-table.dataSet {
-    border: 2px solid grey;
-    border-collapse: collapse;
+    margin-bottom: 0.3em;
 }
 
-font.ratio {
-	font-size: 15px;
-	font-family: Times;
-}	
+/* 링크 스타일 */
+a {
+    color: #000;
+    font-weight: 300;
+    text-decoration: underline;
+}
