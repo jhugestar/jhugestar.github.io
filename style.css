@@ -38,9 +38,15 @@ p, ul {
     margin-bottom: 1em; /* 문단 사이의 여백 */
 }
 
-/* 리스트 항목 간격 */
+/* News 리스트 항목 간의 간격 */
 li {
-    margin-bottom: 0.3em;
+    margin-bottom: 0.7em; /* 너무 좁지도 넓지도 않은 적당한 숨구멍 */
+}
+
+/* li 안의 p 태그: 여백을 완전히 없애면 li margin으로만 간격 조절이 가능해져서 관리가 쉽습니다 */
+li p {
+    margin: 0;
+    line-height: 1.5; /* 요청하신 1.5 유지 */
 }
 
 /* 링크 스타일 */
