@@ -70,15 +70,16 @@
     }
     .profile-info { flex: 1; }
     .profile-info .Name {
-      font-size: 34px;
-      font-weight: 700;
+      font-size: 36px;
+      font-weight: 600;
       line-height: 1.2;
+      letter-spacing: -0.5px;
       margin-bottom: 10px;
       display: block;
     }
     .profile-info p {
-      font-size: 15px;
-      line-height: 1.7;
+      font-size: 16px;
+      line-height: 1.5;
       font-weight: 300;
       margin-bottom: 10px;
     }
@@ -110,16 +111,17 @@
     }
     .profile-photos img {
       max-height: 220px;
+      max-width: 165px;
       border-radius: 4px;
       display: block;
     }
 
     /* ── Bio ──────────────────────────────────────── */
     .bio {
-      font-size: 15px;
-      line-height: 1.75;
+      font-size: 16px;
+      line-height: 1.5;
       font-weight: 300;
-      margin-bottom: 28px;
+      margin-bottom: 1em;
     }
 
     /* ── Internship notice ────────────────────────── */
@@ -128,21 +130,21 @@
       border-left: 3px solid #4477cc;
       padding: 10px 16px;
       margin-bottom: 28px;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
+      line-height: 1.5;
       border-radius: 0 4px 4px 0;
     }
     .notice a { color: #2255bb; }
 
     /* ── Section headings ─────────────────────────── */
     .section-title {
-      font-size: 20px;
-      font-weight: 700;
-      margin-top: 44px;
-      margin-bottom: 16px;
-      padding-bottom: 8px;
-      border-bottom: 1.5px solid #ccc;
-      letter-spacing: 0.01em;
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 1.4em;
+      margin-bottom: 0.5em;
+      padding-bottom: 0.2em;
+      border-bottom: 1.2px solid #aaa;
     }
 
     /* ── Research videos ──────────────────────────── */
@@ -155,10 +157,10 @@
     .research-video-item { text-align: center; }
     .research-video-item iframe { display: block; border-radius: 4px; }
     .research-video-item a {
-      font-size: 13px;
-      font-weight: 600;
-      text-decoration: none;
-      color: #333;
+      font-size: 16px;
+      font-weight: 300;
+      text-decoration: underline;
+      color: #000;
       display: block;
       margin-top: 6px;
     }
@@ -171,21 +173,21 @@
     .news-list li {
       display: flex;
       gap: 16px;
-      padding: 7px 0;
-      border-bottom: 1px solid #f0f0f0;
-      font-size: 14px;
-      line-height: 1.6;
+      padding: 0;
+      font-size: 16px;
+      line-height: 1.5;
       font-weight: 300;
+      margin-bottom: 0.4em;
     }
-    .news-list li:last-child { border-bottom: none; }
+    .news-list li:last-child { margin-bottom: 0; }
     .news-date {
       min-width: 80px;
       font-weight: 600;
       color: #555;
-      font-size: 13px;
+      font-size: 16px;
       padding-top: 1px;
     }
-    .news-list a { color: #000; font-weight: 400; }
+    .news-list a { color: #000; font-weight: 300; text-decoration: underline; }
 
     /* ── Students grid ────────────────────────────── */
     .students-grid {
@@ -197,13 +199,13 @@
       padding: 4px 0;
     }
     .students-grid a {
-      font-size: 14.5px;
+      font-size: 16px;
       font-weight: 300;
       color: #000;
       display: inline;
     }
     .student-role {
-      font-size: 13.5px;
+      font-size: 16px;
       color: #555;
       font-weight: 300;
       margin-left: 2px;
@@ -224,22 +226,24 @@
       display: block;
     }
     .resource-table p {
-      font-size: 14.5px;
+      font-size: 16px;
+      font-weight: 300;
       margin: 0;
     }
 
     /* ── Publications ─────────────────────────────── */
     .pub-note {
-      font-size: 13px;
+      font-size: 16px;
       color: #666;
       font-style: italic;
+      font-weight: 300;
       margin-bottom: 16px;
     }
     .pub-list { list-style: none; padding: 0; }
     .pub-entry {
       display: flex;
       gap: 20px;
-      padding: 16px 0;
+      padding: 2px 0;
       border-bottom: 1px solid #f0f0f0;
       align-items: flex-start;
     }
@@ -259,34 +263,35 @@
     }
     .pub-body { flex: 1; }
     .pub-title {
-      font-size: 14.5px;
-      font-weight: 600;
-      line-height: 1.45;
+      font-size: 16px;
+      font-weight: 550;
+      line-height: 1.5;
       margin-bottom: 4px;
     }
     .pub-authors {
-      font-size: 13.5px;
+      font-size: 16px;
       font-weight: 300;
       color: #333;
       line-height: 1.5;
       margin-bottom: 3px;
     }
     .pub-venue {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 300;
+      line-height: 1.5;
       margin-bottom: 6px;
     }
     .pub-award {
-      font-size: 12.5px;
-      font-weight: 600;
+      font-size: 16px;
+      font-weight: 550;
       color: #1a55cc;
       margin-bottom: 5px;
     }
-    .pub-links { display: flex; gap: 6px; flex-wrap: wrap; }
+    .pub-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
     .pub-links a {
-      font-size: 12.5px;
-      font-weight: 600;
-      padding: 2px 9px;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 1px 8px;
       border: 1px solid #ccc;
       border-radius: 3px;
       text-decoration: none;
@@ -295,9 +300,52 @@
     }
     .pub-links a:hover { border-color: #666; color: #000; }
 
+    .pub-press {
+      margin-top: 7px;
+      font-size: 14px;
+      color: #888;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pub-press img { opacity: 0.75; vertical-align: middle; }
+    .pub-press a:hover img { opacity: 1; }
+
     .venue-oral { color: #1a55cc; font-weight: 600; }
     .venue-highlight { color: #1a55cc; font-weight: 600; }
-    .acceptance { color: #888; font-size: 12px; }
+    .acceptance { color: #888; font-size: 14px; font-weight: 300; }
+
+    /* ── Press Coverage ──────────────────────────── */
+    .press-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .press-item {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+    .press-item img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .press-item a { color: #000; }
+    .press-list {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      padding-left: 18px;
+    }
+    .press-list li { margin-bottom: 0.7em; }
+    .press-list a { color: #000; text-decoration: underline; font-weight: 300; }
 
     /* ── Footer ───────────────────────────────────── */
     footer {
@@ -323,6 +371,7 @@
     <li><a href="#students">Students</a></li>
     <li><a href="#datasets">Datasets</a></li>
     <li><a href="#publications">Publications</a></li>
+    <li><a href="#press">Press</a></li>
   </ul>
 </nav>
 
@@ -427,7 +476,7 @@
     <div><a href="https://chae0382.github.io/">Chae-Yeon Lee</a><span class="student-role">Intern</span></div>
   </div>
 
-  <div class="section-title" style="font-size:17px; margin-top:28px;">Alumni</div>
+  <div class="section-title" style="margin-top:28px;">Alumni</div>
   <div class="students-grid">
     <div><a href="https://yc4ny.github.io/">Yonwoo Choi</a><span class="student-role">MS</span></div>
     <div><a href="https://rureadyo.github.io/">Sungjae Park</a><span class="student-role">Intern</span></div>
@@ -1177,6 +1226,11 @@
           <a href="/panoptic-studio/ICCV2015_SMC_Supp.pdf">Supplementary</a>
           <a href="/panoptic-studio">Project Page</a>
         </div>
+        <div class="pub-press">Press:
+          <a href="http://www.theverge.com/2016/12/7/13857144/social-vr-carnegie-mellon-panoptic-studio-facebook-oculus-toybox"><img src="/logos/Verge.png" height="16"></a>
+          <a href="https://www.technologyreview.com/s/601276/5-things-you-need-to-know-about-facebooks-next-10-years/"><img src="https://d267cvn3rvuq91.cloudfront.net/_/img/stacked-logo.svg?v=2" height="16"></a>
+          <a href="http://www.spiegel.de/netzwelt/gadgets/das-panoptische-studio-computer-entziffern-koerpersprache-a-1068155.html"><img src="/logos/spiegelOnline.jpg" height="14"></a>
+        </div>
       </div>
     </li>
 
@@ -1193,6 +1247,23 @@
           <a href="/14/CVPR_2014_Visibility.pdf">Paper (PDF)</a>
           <a href="/14/visibility.html">Project Page</a>
           <a href="/14/visibilityDataset.html">Dataset</a>
+        </div>
+        <div class="pub-press">Press:
+          <a href="http://www.reuters.com/article/2015/04/29/us-usa-panoptic-studio-idUSKBN0NK09920150429"><img src="/logos/Reuters_logo.png" height="16"></a>
+          <a href="http://www.voanews.com/content/new-studio-yields-most-detailed-motion-capture-in-3d/2743347.html"><img src="/logos/VOA_logo.png" height="14"></a>
+          <a href="http://spectrum.ieee.org/tech-talk/computing/software/camerafilled-dome-recreates-full-3d-motion-scenes"><img src="/logos/IEEESpectrum.jpeg" height="16"></a>
+          <a href="http://www.cnet.com/videos/tomorrow-daily-021-new-video-capture-tech-the-rickroll-rickmote-episode-vii-new-x-wing/"><img src="http://upload.wikimedia.org/wikipedia/en/8/8f/Cnetlogo.png" height="16"></a>
+          <a href="http://www.nbcnews.com/tech/innovation/camera-studded-dome-tracks-your-every-move-precision-n161541"><img src="/logos/nbc-news.png" height="13"></a>
+          <a href="http://news.discovery.com/tech/gear-and-gadgets/dome-of-500-cameras-creates-amazing-3-d-flicks-140724.htm"><img src="/logos/discovery.jpg" height="16"></a>
+          <a href="http://www.engadget.com/2014/07/21/carnegie-motion-capture-dome/"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Engadget-logo.svg/200px-Engadget-logo.svg.png" height="16"></a>
+          <a href="http://www.theverge.com/2014/7/21/5923767/panoptic-studio-3d-motion-capture-carnegie-melon"><img src="/logos/Verge.png" height="16"></a>
+          <a href="http://www.sciencedaily.com/releases/2014/07/140717124950.htm"><img src="https://www.sciencedaily.com/images/sd-logo.png" height="13"></a>
+          <a href="http://phys.org/news/2014-07-combinehundreds-videos-reconstruct-3d-motion.html"><img src="/logos/phyOrg.jpg" height="20"></a>
+          <a href="http://www.slate.com/articles/video/video/2014/07/panoptic_studio_carnegie_mellon_s_3_d_camera_dome_can_capture_action.html"><img src="http://upload.wikimedia.org/wikipedia/commons/1/13/Slate_logo.png" height="18"></a>
+          <a href="http://petapixel.com/2014/07/21/researchers-use-480-camera-setup-accurately-capture-3d-motion/"><img src="/logos/petapixel.jpg" height="20"></a>
+          <a href="http://www.gizmag.com/3d-motion-reconstruction-camera-panoptic-dome/33033/"><img src="/logos/gizmag.jpeg" height="20"></a>
+          <a href="http://www.theregister.co.uk/2014/07/22/boffins_fill_a_dome_with_480_cameras_for_3d_motion_capture/"><img src="/logos/TheRegisterLogo.jpg" height="16"></a>
+          <a href="http://www.theengineer.co.uk/electronics/news/3d-motion-captured-without-markers/1018947.article"><img src="/logos/theEngineer.png" height="14"></a>
         </div>
       </div>
     </li>
@@ -1228,6 +1299,88 @@
     </li>
 
   </ul><!-- /pub-list -->
+
+  <a id="press"></a>
+  <!-- ── Tutorial ───────────────────────────────── -->
+  <div class="section-title">Tutorial</div>
+  <div class="pub-entry">
+    <div class="pub-thumb">
+      <img src="img/dome_tutorial.jpg" alt="Dome Tutorial">
+    </div>
+    <div class="pub-body">
+      <div class="pub-title">DIY A Multiview Camera System: Panoptic Studio Teardown</div>
+      <div class="pub-authors">Hanbyul Joo, Tomas Simon, Hyun Soo Park, Shohei Nobuhara, and Yaser Sheikh</div>
+      <div class="pub-venue">In Conjunction with <em>CVPR 2017</em></div>
+      <div class="pub-links">
+        <a href="http://domedb.perception.cs.cmu.edu/tutorials/cvpr17/index.html">Tutorial Page</a>
+        <a href="https://www.youtube.com/watch?v=wmQF3XKvL8s">Video</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Press Coverage ────────────────────────── -->
+  <div class="section-title">Press Coverage</div>
+
+  <div class="press-grid">
+    <div class="press-item">
+      <img src="/img/wired_han_crop2.jpg" alt="WIRED">
+      <div>WIRED, 2018</div>
+      <div>[<a href="https://www.wired.com/story/inside-the-panoptic-studio/" target="_blank">Video + Article</a>]</div>
+    </div>
+    <div class="press-item">
+      <img src="/img/reuters_2017.jpg" alt="Reuters 2017">
+      <div>Reuters, 2017</div>
+      <div>[<a href="https://www.reuters.com/video/2017/09/22/500-camera-dome-trains-computer-to-read?videoId=372591598" target="_blank">Video</a>]</div>
+    </div>
+    <div class="press-item">
+      <img src="/img/verge_2.jpg" alt="The Verge 2016">
+      <div>The Verge, 2016</div>
+      <div>[<a href="https://youtu.be/Ryawcs6OZmI?t=1m7s" target="_blank">Video</a>, <a href="http://www.theverge.com/2016/12/7/13857144/social-vr-carnegie-mellon-panoptic-studio-facebook-oculus-toybox" target="_blank">Article</a>]</div>
+    </div>
+    <div class="press-item">
+      <img src="/img/reuters.jpg" alt="Reuters 2015">
+      <div>Reuters, 2015</div>
+      <div>[<a href="http://www.reuters.com/article/2015/04/29/us-usa-panoptic-studio-idUSKBN0NK09920150429" target="_blank">Video + Article</a>]</div>
+    </div>
+    <div class="press-item">
+      <img src="/img/discovery.jpg" alt="Discovery">
+      <div>Daily Planet, Discovery, 2015</div>
+      <div>[<a href="https://youtu.be/GcX-mwltlgk?t=1m27s" target="_blank">Video</a>]</div>
+    </div>
+    <div class="press-item">
+      <img src="/img/ebs1.jpg" alt="EBS">
+      <div>Docuprime, EBS (Korean TV), 2017</div>
+      <div>[<a href="https://www.youtube.com/watch?v=Axe_VkhBjPw&feature=youtu.be&t=3m20s" target="_blank">Video</a>]</div>
+    </div>
+  </div>
+
+  <ul class="press-list">
+    <li>Arirang TV, <a href="https://www.youtube.com/watch?v=pAR-3zKXPj0&list=PLWdVPk7xgPCCwVgJEFfAXxVfauDlELBt-&index=6">The Evolution of AI</a> and <a href="https://www.youtube.com/watch?v=0OkVA9pdj3I&list=PLWdVPk7xgPCCwVgJEFfAXxVfauDlELBt-&index=4">AI: Reading Humans</a>, 2025</li>
+    <li>IEEE Spectrum, <a href="https://spectrum.ieee.org/video/robotics/robotics-software/robots-learn-to-speak-body-language">Robots Learn to Speak Body Language</a>, 2017</li>
+    <li>ZDNet, <a href="http://www.zdnet.com/article/keypoint-detection-unlocks-secrets-of-body-language/">CMU researchers create a huge dome that can read body language</a>, 2017</li>
+    <li>TechCrunch, <a href="https://techcrunch.com/2017/07/07/cmu-researchers-create-a-huge-dome-that-can-read-body-language/">CMU researchers create a huge dome that can read body language</a>, 2017</li>
+    <li>BBC News, <a href="http://www.bbc.com/news/av/technology-41584732/the-dome-which-could-help-machines-understand-behaviour">The dome which could help machines understand behaviour</a>, 2017</li>
+    <li>CMU News, <a href="http://www.cmu.edu/news/stories/archives/2017/march/robotics-tepper-negotiation-study.html">Scientists put human interaction under the microscope</a>, 2017</li>
+    <li>SPIEGEL ONLINE (German), <a href="http://www.spiegel.de/netzwelt/gadgets/das-panoptische-studio-computer-entziffern-koerpersprache-a-1068155.html">The panoptic Studio: Computer decipher the secrets of body language</a>, 2015</li>
+    <li>Co.DESIGN, <a href="http://www.fastcodesign.com/3054561/inside-a-robot-eyeball-science-will-decode-our-body-language">Inside A Robot Eyeball, Science Will Decode Our Body Language</a>, 2015</li>
+    <li>WIRED (Italian), <a href="http://www.wired.it/tv/guarda-riprese-360-gradi-panoptic-studio">Panoptic Studio: The Latest Generation of Motion Capture</a>, 2015</li>
+    <li>Voice of America, <a href="http://www.voanews.com/content/new-studio-yields-most-detailed-motion-capture-in-3d/2743347.html">New Studio Yields Most Detailed Motion Capture in 3D</a>, 2015</li>
+    <li>CNet, <a href="http://www.cnet.com/videos/tomorrow-daily-021-new-video-capture-tech-the-rickroll-rickmote-episode-vii-new-x-wing/">Tomorrow Daily: New video capture tech</a>, 2014</li>
+    <li>NBCNews, <a href="http://www.nbcnews.com/tech/innovation/camera-studded-dome-tracks-your-every-move-precision-n161541">Camera-Studded Dome Tracks Your Every Move With Precision</a>, 2014</li>
+    <li>IEEE Spectrum, <a href="http://spectrum.ieee.org/tech-talk/computing/software/camerafilled-dome-recreates-full-3d-motion-scenes">Camera-Filled Dome Recreates Full 3-D Motion Scenes</a>, 2014</li>
+    <li>Discovery News, <a href="http://news.discovery.com/tech/gear-and-gadgets/dome-of-500-cameras-creates-amazing-3-d-flicks-140724.htm">Amazing 3-D Flicks from Dome of 500 Cameras?</a>, 2014</li>
+    <li>Gizmodo, <a href="http://gizmodo.com/a-dome-packed-with-480-cameras-captures-detailed-3d-ima-1608263411">A Dome Packed With 480 Cameras Captures Detailed 3D Images In Motion</a>, 2014</li>
+    <li>The Verge, <a href="http://www.theverge.com/2014/7/21/5923767/panoptic-studio-3d-motion-capture-carnegie-melon">Scientists build a real Panopticon that captures your every move in 3D</a>, 2014</li>
+    <li>ScienceDaily, <a href="http://www.sciencedaily.com/releases/2014/07/140717124950.htm">Hundreds of videos used to reconstruct 3-D motion without markers</a>, 2014</li>
+    <li>Phys.org, <a href="http://phys.org/news/2014-07-combinehundreds-videos-reconstruct-3d-motion.html">Researchers combine hundreds of videos to reconstruct 3D motion without markers</a>, 2014</li>
+    <li>Engadget, <a href="http://www.engadget.com/2014/07/21/carnegie-motion-capture-dome/">Watch a dome full of cameras capture 3D motion in extreme detail</a>, 2014</li>
+    <li>PetaPixel, <a href="http://petapixel.com/2014/07/21/researchers-use-480-camera-setup-accurately-capture-3d-motion/">Researchers Use a 480-Camera Dome to More Accurately Capture 3D Motion</a>, 2014</li>
+    <li>Gizmag, <a href="http://www.gizmag.com/3d-motion-reconstruction-camera-panoptic-dome/33033/">Camera-studded dome used to reconstruct 3D motion</a>, 2014</li>
+    <li>The Register, <a href="http://www.theregister.co.uk/2014/07/22/boffins_fill_a_dome_with_480_cameras_for_3d_motion_capture/">Boffins fill a dome with 480 cameras for 3D motion capture</a>, 2014</li>
+    <li>The Engineer, <a href="http://www.theengineer.co.uk/electronics/news/3d-motion-captured-without-markers/1018947.article">3D motion captured without markers</a>, 2014</li>
+    <li>Popular Photography, <a href="http://www.popphoto.com/news/2014/07/carnegie-mellon-packs-480-cameras-dome-to-perfectly-track-3d-motion">Carnegie Mellon Packs 480 Cameras In A Dome To Perfectly Track 3D Motion</a>, 2014</li>
+    <li>CMU News, <a href="http://www.cmu.edu/news/stories/archives/2014/july/july17_reconstructing3Dmotion.html">Carnegie Mellon Combines Hundreds of Videos To Reconstruct 3D Motion Without Use of Markers</a>, 2014</li>
+  </ul>
 
 </div><!-- /page -->
 
