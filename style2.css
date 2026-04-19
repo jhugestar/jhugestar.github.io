@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/* body,td,th {
+	font-family: "Open Sans", sans-serif;
+	font-size: large;
+	font-weight: 300;
+} */
+
+/* b { font-weight: 600 }    */
+/* b {
+  font-family: "Source Sans 3", "Source Serif 4", "Times New Roman", Times, serif;
+  font-style: normal; 
+  font-variant-ligatures: common-ligatures;
+} 
+
+ 
+h1 {
+	line-height: 40px;
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif;
+}
+h2 {
+	color: #000000 ;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	margin-top: 0.7em;
+	margin-bottom: 0.3em;
+	padding-bottom: 0.2em;
+	line-height: 1.0;
+	padding-top: 0.5em;
+	border-bottom: 1px solid #aaaaaa;
+} 
+
+p,ul {
+  	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-weight: 100;
+}
+ .Name {
+	font-size: 30px;
+} */
+
+
+body, td, th {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px; /* 너무 큰 large 대신 px 단위 추천 */
+    font-weight: 400; /* 본문 굵기를 조금 올려 가독성 확보 */
+    line-height: 1.6; /* 줄 간격을 넓혀야 쾌적합니다 */
+    color: #333;
+}
+
+b, strong {
+    font-weight: 600; /* 600 정도가 본문과 가장 잘 어우러집니다 */
+}
+
+p, ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+
+a {
+	color: #000000;
+	/* font-size: 18px; */
+	font-weight: 300;
+}
+li {
+margin-top: 0.2em;
+margin-bottom: 0.2em;
+}
+table.dataSet {
+    border: 2px solid grey;
+    border-collapse: collapse;
+}
+
+font.ratio {
+	font-size: 15px;
+	font-family: Times;
+}	
