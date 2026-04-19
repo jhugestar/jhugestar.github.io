@@ -351,6 +351,73 @@
     .press-list li { margin-bottom: 0.7em; }
     .press-list a { color: #000; text-decoration: underline; font-weight: 300; }
 
+    /* ── Mobile ───────────────────────────────────── */
+    @media (max-width: 680px) {
+      #topnav ul {
+        padding: 0 8px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+      }
+      #topnav ul li a {
+        padding: 10px 10px;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      .page {
+        padding: 20px 16px 60px 16px;
+      }
+
+      .profile {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .profile-photos {
+        margin-left: 0;
+        justify-content: center;
+      }
+      .profile-photos img {
+        max-height: 160px;
+      }
+      .profile-info .Name {
+        font-size: 28px;
+        white-space: normal;
+      }
+
+      .research-videos {
+        flex-direction: column;
+      }
+      .research-video-item iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+      }
+
+      .students-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .resource-table td:first-child { width: 120px; }
+      .resource-table img { max-width: 120px; }
+
+      .pub-entry {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .pub-thumb {
+        width: 100%;
+      }
+      .pub-thumb img,
+      .pub-thumb video {
+        max-height: 200px;
+      }
+
+      .press-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+
     /* ── Footer ───────────────────────────────────── */
     footer {
       margin-top: 60px;
