@@ -191,6 +191,20 @@
       padding-top: 1px;
     }
     .news-list a { color: #000; font-weight: 300; text-decoration: underline; }
+    .news-list.collapsed li:nth-child(n+16) { display: none; }
+    .news-toggle {
+      margin-top: 10px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 1px 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      background: none;
+      color: #333;
+      cursor: pointer;
+    }
+    .news-toggle:hover { border-color: #888; }
 
     /* ── Students grid ────────────────────────────── */
     .students-grid {
@@ -511,7 +525,7 @@
   <!-- ── News ─────────────────────────────────────── -->
   <a id="news"></a>
   <div class="section-title">News</div>
-  <ul class="news-list">
+  <ul class="news-list collapsed" id="news-list">
     <li><span class="news-date">Sep 2026</span><span>Three papers got accepted in NeurIPS 2026: <a href="https://subin6.github.io/page-hope/">HOPE</a>, <a href="https://snuvclab.github.io/SimuScene/">SimuScene</a>, and <a href="https://kyungwoncho.github.io/OmniEgoCap/">OmniEgoCap</a></span></li>
     <li><span class="news-date">Sep 2026</span><span>I gave a talk in <a href="https://docs.google.com/document/d/e/2PACX-1vR-Sv-MAil9SkEWFwpZjZiWTLIlaupPEe5yupoU9e9dDFHhfdPYKWwK7Zs5oMKmc6wgypGJxz9LUkNG/pub">CS381V: Visual Recognition</a> at UT Austin</span></li>
     <li><span class="news-date">Sep 2026</span><span>I will be giving a talk at the <a href="https://www.ri.cmu.edu/event/from-capturing-people-to-teaching-robots/">CMU VASC Seminar</a>: &quot;From Capturing People to Teaching Robots&quot;</span></li>
@@ -537,6 +551,19 @@
     <li><span class="news-date">Mar 2025</span><span>I will be giving a talk in an ICRA workshop: <a href="https://sites.google.com/andrew.cmu.edu/icra2025-vision-wearable-robot">From Computer Vision-based Motion Tracking to Wearable Assistive Robot Control</a></span></li>
     <li><span class="news-date">Jan 2025</span><span>I will serve as an area chair for CVPR 2025, ICCV 2025, and NeurIPS 2025</span></li>
   </ul>
+  <button class="news-toggle" id="news-toggle" type="button" aria-controls="news-list" aria-expanded="false">Show all news</button>
+  <script>
+    (function () {
+      var list = document.getElementById('news-list');
+      var btn = document.getElementById('news-toggle');
+      if (list.children.length <= 15) { btn.style.display = 'none'; return; }
+      btn.addEventListener('click', function () {
+        var collapsed = list.classList.toggle('collapsed');
+        btn.textContent = collapsed ? 'Show all news' : 'Show less';
+        btn.setAttribute('aria-expanded', String(!collapsed));
+      });
+    })();
+  </script>
 
   <!-- ── Students ──────────────────────────────────── -->
   <a id="students"></a>
